@@ -31,7 +31,7 @@ void removeVowels(){
         }
     }
     cout<<news<<endl;
-
+}
 
 
 
