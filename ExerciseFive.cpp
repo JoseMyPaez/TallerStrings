@@ -20,13 +20,37 @@ void itsPalindrome(string word){
         cout<<"No es palíndromo"<<endl;
     }
     
-}   
+}  
+
+void itsPalindromeTwo(string word){
+    bool isPalindrome = true;
+    for (int i = 0; i < word.size(); i++)
+    {
+        for (int j = word.size(); j => 0; i--)
+        {
+            if (word[i]=!word[j])
+            {
+                isPalindrome = false;
+            }   
+        }
+        
+    }
+
+    if (isPalindrome)
+    {
+        cout<<"Es palíndromo"<<endl;
+    } else {
+        cout<<"No es palíndromo"<<endl;
+    }
+    
+}  
 
 int main(){
     string word;
     cout<<"Ingrese una palabra: "<<endl;
     cin>>word;
     itsPalindrome(word);
+    itsPalindromeTwo(word);
     return 0;
 
 }
