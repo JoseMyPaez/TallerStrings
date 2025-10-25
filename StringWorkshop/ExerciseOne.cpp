@@ -8,6 +8,7 @@ using namespace std;
 //3. No debe contener espacios.
 bool validateSize(string userName){
     int sizeUsername = userName.size();
+    cout<<"Tamaño "<<sizeUsername<<endl;
     if (sizeUsername<=12&&sizeUsername>=6)
     {
         return true;
@@ -18,13 +19,8 @@ bool validateSize(string userName){
 }
 
 bool validatefirstLetter(string userName){
-    if (userName[0]<='z'&& userName[0]>='A')
-    {
-        return true;
-    }else
-    {
-        return false;
-    }
+    cout<<"Prmera letra "<<userName[0]<<endl;
+    return (userName[0] >= 'a' && userName[0] <= 'z') || (userName[0] >= 'A' && userName[0] <= 'Z');
 }
 
 bool validatewithoutSpace(string userName){
@@ -37,11 +33,12 @@ bool validatewithoutSpace(string userName){
             status = false;
         }
     }
+    cout<<"El estado de espacios es "<<status<<endl;
     return status;
 }
 
 void userNameValidation(){
-    string userName = "Hell0W0rld!";
+    string userName = "hll0W0rld!";
     if (validatefirstLetter(userName)&&validateSize(userName)&&validatewithoutSpace(userName))
     {
         cout<<"Nombre de usuario correcto"<<endl;

@@ -34,31 +34,33 @@ int numberCounter(string userName){
     return counter;
 }
 
-int nonAlphabeticCounter(string userName){
-    int counter=0;
-    for (int i = 0; i < userName.size(); i++)
-    {
-        if (userName[i]<='z'&& userName[i]>='A')
-        {
-        continue;
-        }else
-        {
-        counter++;
-        }
-    }
-    cout<<"Hay "<<counter<<" caracteres no alfabeticos "<<endl;
-    return counter;
+bool validateLetter(char letter){
+    return (letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z');
 }
 
-void textCounter(){
-    string userName = "Hell0W0rld!";
-    consonantsCounter(userName);
-    vowelCounter(userName);
-    nonAlphabeticCounter(userName);
+bool validateLastLetter(string userName){
+    char lastLetter = userName[userName.size()-1];
+    cout<<"ultima letra "<<lastLetter<<endl;
+        if (validateLetter(lastLetter) )
+        {
+            cout<<"La ultima posicion es una letra"<<endl;
+            return true;
+        }else
+        {
+            cout<<"La ultima posicion no es una letra"<<endl;
+            return false;
+        }
+}
+
+void validateCode(){
+    string code = "A12-BX9-Z";
+    counterScript(code);
+    numberCounter(code);
+    validateLastLetter(code);
 }
 
 int main()
 {
-    textCounter();
+    validateCode();
     return 0;
 }

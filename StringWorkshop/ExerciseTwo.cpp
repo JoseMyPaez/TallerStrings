@@ -41,11 +41,15 @@ int consonantsCounter(string userName){
     return counter;
 }
 
+bool validateLetter(char letter){
+    return (letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z');
+}
+
 int nonAlphabeticCounter(string userName){
     int counter=0;
     for (int i = 0; i < userName.size(); i++)
     {
-        if (userName[i]<='z'&& userName[i]>='A')
+        if (validateLetter(userName[i]))
         {
         continue;
         }else
