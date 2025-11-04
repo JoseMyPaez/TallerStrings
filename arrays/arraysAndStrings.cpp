@@ -15,7 +15,8 @@ void forWithArray() {
     int size = 3;
     int array [size] = {1,12,25};
     int fistValue = array[0];
-    cout << "Tamaño del arreglo: " << sizeof(array) << endl;
+    int arraysize = sizeof(array) / sizeof(array[0]);
+    cout << "Tamaño del arreglo: " << arraysize << endl;
     cout << "Primer valor: " << fistValue << endl;
     cout << "Recorriendo el arreglo: " << endl;
     for (int i = 0; i < size ; i++)

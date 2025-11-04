@@ -27,4 +27,4 @@ int main() {
     cin >> minLength;
     countWordsLongerThanNumber(minLength, text);
     return 0;
-}
+}*/djufu
