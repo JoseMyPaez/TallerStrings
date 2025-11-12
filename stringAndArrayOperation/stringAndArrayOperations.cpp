@@ -26,6 +26,42 @@ void modifyArray(string products[], int prices[], int size) {
     printArray(products,prices,size);
 }
 
+void ProductBrowser(string products[], int prices[], int size) {
+    string productToSearch;
+    cout << "Ingrese el nombre del producto a buscar: ";
+    cin >> productToSearch;
+    for (int i = 0; i < size; i++)
+    {
+        if (products[i] == productToSearch) {
+            cout << "Producto encontrado: " << products[i] << " - Precio: " << prices[i] << endl;
+            break;
+        }
+    }
+}
+
+void productsInRange(string products[], int prices[], int size) {
+    int minPrice, maxPrice;
+    cout << "Ingrese el precio minimo: ";
+    cin >> minPrice;
+    cout << "Ingrese el precio maximo: ";
+    cin >> maxPrice;
+    cout << "Productos en el rango de precios " << minPrice << " - " << maxPrice << ":" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        if (prices[i] >= minPrice && prices[i] <= maxPrice) {
+            cout << "Producto: " << products[i] << " - Precio: " << prices[i] << endl;
+        }
+    }
+}
+
+void calculateTotalSales(int prices[], int size) {
+    int total = 0;
+    for (int i = 0; i < size; i++)
+    {
+        total += prices[i];
+    }
+    cout << "El total de ventas es: " << total << endl;
+}
 
 int getUserAction() {
     int userAction;
@@ -37,7 +73,6 @@ cout<<"Implemente un menú con las siguientes opciones:"<<endl<<
 "4. Buscar una venta por nombre."<<endl<<
 "5. Mostrar ventas dentro de un rango de precios."<<endl<<
 "6. Calcular el total de ventas."<<endl<<
-"7. Salir del programa."<<endl<<
 "0. para salir: " << endl;
     cin >> userAction;
     cout << "---------------------" << endl;
@@ -93,6 +128,18 @@ void run() {
             cin >> arraySize;
             products = getNewStringList(arraySize);
             prices= getNewIntList(arraySize);
+            break;
+        // Buscar
+        case 4:
+            ProductBrowser(products,prices, arraySize);
+            break;
+        // Rango
+        case 5:
+            productsInRange(products,prices, arraySize);
+            break;
+        // Total
+        case 6:
+            calculateTotalSales(prices, arraySize);
             break;
         // Salir    
         case 0:
