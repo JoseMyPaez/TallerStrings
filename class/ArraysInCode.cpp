@@ -79,23 +79,22 @@ class IntOfArrayManager {
         return newList;
     }
 
-
-void productsInRange() {
-    int minPrice, maxPrice;
-    cout << "Ingrese el precio minimo: ";
-    cin >> minPrice;
-    cout << "Ingrese el precio maximo: ";
-    cin >> maxPrice;
-    cout << "Productos en el rango de precios " << minPrice << " - " << maxPrice << ":" << endl;
-    for (int i = 0; i < arraySize; i++)
-    {
-        if (prices[i] >= minPrice && prices[i] <= maxPrice) {
-            cout << "Producto: " << products[i] << " - Precio: " << prices[i] << endl;
+    void productsInRange() {
+        int minPrice, maxPrice;
+        cout << "Ingrese el precio minimo: ";
+        cin >> minPrice;
+        cout << "Ingrese el precio maximo: ";
+        cin >> maxPrice;
+        cout << "Productos en el rango de precios " << minPrice << " - " << maxPrice << ":" << endl;
+        for (int i = 0; i < arraySize; i++)
+        {
+            if (prices[i] >= minPrice && prices[i] <= maxPrice) {
+                cout << "Producto: " << products[i] << " - Precio: " << prices[i] << endl;
+            }
         }
     }
-}
 
-void modifyArray() {
+    void modifyArray() {
     int positionToModify;
     printArray();
     cout << "Ingrese la posicion a modificar: ";
