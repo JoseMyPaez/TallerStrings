@@ -95,21 +95,21 @@ class IntOfArrayManager {
     }
 
     void modifyArray() {
-    int positionToModify;
-    printArray();
-    cout << "Ingrese la posicion a modificar: ";
-    cin >> positionToModify;
-    positionToModify = positionToModify - 1;
-    string newProductName;
-    int newPrice;
-    cout << "Ingrese el nuevo nombre de Producto: ";
-    cin >> newProductName;
-    cout << "Ingrese el nuevo Precio de Producto: ";
-    cin >> newPrice;
-    products[positionToModify] = newProductName;
-    prices[positionToModify] = newPrice;
-    printArray();
-}
+        int positionToModify;
+        printArray();
+        cout << "Ingrese la posicion a modificar: ";
+        cin >> positionToModify;
+        positionToModify = positionToModify - 1;
+        string newProductName;
+        int newPrice;
+        cout << "Ingrese el nuevo nombre de Producto: ";
+        cin >> newProductName;
+        cout << "Ingrese el nuevo Precio de Producto: ";
+        cin >> newPrice;
+        products[positionToModify] = newProductName;
+        prices[positionToModify] = newPrice;
+        printArray();
+    }
 
     void ProductBrowser() {
         string productToSearch;
@@ -134,13 +134,13 @@ class IntOfArrayManager {
     }
     
     void calculateTotalSales() {
-    int total = 0;
-    for (int i = 0; i < arraySize; i++)
-    {
-        total += prices[i];
+        int total = 0;
+        for (int i = 0; i < arraySize; i++)
+        {
+            total += prices[i];
+        }
+        cout << "El total de ventas es: " << total << endl;
     }
-    cout << "El total de ventas es: " << total << endl;
-}
 
     int getUserAction() {
        int userAction;
