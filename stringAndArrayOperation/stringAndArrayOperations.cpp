@@ -2,14 +2,14 @@
 
 using namespace std;
 
-/*void printArray(string products[],int prices[], int size) {
+void printArray(string products[],int prices[], int size) {
     for (int i = 0; i < size; i++)
     {
         cout << "Posicion " << i + 1 << " - Producto: " << products[i]<< " - Precio: "<< prices[i] << endl;
     }
-}*/
+}
 
-/*void modifyArray(string products[], int prices[], int size) {
+void modifyArray(string products[], int prices[], int size) {
     int positionToModify;
     printArray(products,prices,size);
     cout << "Ingrese la posicion a modificar: ";
@@ -24,9 +24,9 @@ using namespace std;
     products[positionToModify] = newProductName;
     prices[positionToModify] = newPrice;
     printArray(products,prices,size);
-}*/
+}
 
-/*void ProductBrowser(string products[], int prices[], int size) {
+void ProductBrowser(string products[], int prices[], int size) {
     string productToSearch;
     cout << "Ingrese el nombre del producto a buscar: ";
     cin >> productToSearch;
@@ -39,7 +39,7 @@ using namespace std;
     }
 }
 
-/*void productsInRange(string products[], int prices[], int size) {
+void productsInRange(string products[], int prices[], int size) {
     int minPrice, maxPrice;
     cout << "Ingrese el precio minimo: ";
     cin >> minPrice;
@@ -53,18 +53,17 @@ using namespace std;
         }
     }
 }
-    */
 
-/*void calculateTotalSales(int prices[], int size) {
+void calculateTotalSales(int prices[], int size) {
     int total = 0;
     for (int i = 0; i < size; i++)
     {
         total += prices[i];
     }
     cout << "El total de ventas es: " << total << endl;
-}*/
+}
 
-/*int getUserAction() {
+int getUserAction() {
     int userAction;
     cout << "---------------------" << endl;
 cout<<"Implemente un menú con las siguientes opciones:"<<endl<<
@@ -78,9 +77,9 @@ cout<<"Implemente un menú con las siguientes opciones:"<<endl<<
     cin >> userAction;
     cout << "---------------------" << endl;
     return userAction;
-}*/
+}
 
-/*string* getNewStringList(int size) {
+string* getNewStringList(int size) {
     string* productName = new string[size];
     for (int i = 0; i < size; i++)
     {
@@ -103,9 +102,9 @@ int* getNewIntList(int size) {
     }
     return values;
 }
- */
+ 
 
-/*void run() {
+void run() {
     int arraySize = 0;
     string* products = getNewStringList(arraySize);
     int* prices = getNewIntList(arraySize);
@@ -154,9 +153,8 @@ int* getNewIntList(int size) {
         }
     }
 }
-*/
-/*int main() {
+
+int main() {
     run();
     return 0;
 }
-    */
